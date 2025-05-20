@@ -1,0 +1,20 @@
+// geo file
+Point(1) = {-1, -1, 0, 1.0};
+Point(2) = {1, -1, 0, 1.0};
+Point(3) = {1, 1, 0, 1.0};
+Point(4) = {-1, 1, 0, 1.0};
+Point(5) = {0, -0, 0, 1.0};
+Point(6) = {0, 1, 0, 1.0};
+Line(1) = {1, 4};
+Line(2) = {4, 6};
+Line(3) = {6, 5};
+Line(4) = {6, 3};
+Line(5) = {3, 2};
+Line(6) = {2, 1};
+Curve Loop(1) = {1, 2, 3, -3, 4, 5, 6};
+Plane Surface(1) = {1};
+Physical Curve(1) = {1, 2, 4, 5, 6};
+Physical Curve(5) = {3};
+Physical Surface(8) = {1};
+MeshSize{1,2,3,4,5,6} = 0.8;
+// MeshSize{ PointsOf{Surface{1};} } = 0.8;
